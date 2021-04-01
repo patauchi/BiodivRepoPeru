@@ -11,7 +11,7 @@ writeOGR(pe, 'pe','peru','ESRI Shapefile')
 
 library(sf)
 pe <- read_sf('/Volumes/SEAGATE/sig/gis/Countries/PER/PER_adm2.shp')
-pe<- pe[,'NAME_1']
+pe<- pe[,'NAME_2']
 
 regions_1k <- sf::st_simplify(pe, preserveTopology = TRUE, dTolerance = 0.008333)
 plot(regions_1k)
