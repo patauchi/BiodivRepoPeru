@@ -4,10 +4,8 @@ library(rgdal)
 pe <- getMap(resolution = "low")
 pe <- pe[which(grepl('South America', pe$GEO3) & as.character(pe$NAME) == 'Peru'),] 
 
-
 dir.create('pe')
 writeOGR(pe, 'pe','peru','ESRI Shapefile')
-
 
 library(sf)
 pe <- read_sf('/Volumes/SEAGATE/sig/gis/Countries/PER/PER_adm2.shp')
